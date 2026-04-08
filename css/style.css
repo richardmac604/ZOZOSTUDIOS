@@ -4,7 +4,7 @@ body {
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    font-family: "avenir-next", sans-serif;
+    font-family: "Jost";
     color:#373737;
 }
 
@@ -190,6 +190,75 @@ footer p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.body-container-booking{
+    padding: 6.25em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+
+.payment-requirements{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.forms{
+    display: flex;
+    flex-direction: row;
+}
+
+.square-link{
+    border-top: #37373749 solid 1px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 150px;
+    flex: 0 0 35%;
+    text-align: left;
+}
+.booking-form{
+    border-top: #37373749 solid 1px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 55%;
+    text-align: left;
+}
+
+.custom-request{
+    border-top: #37373749 solid 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nail-reference{
+    border-top: #37373749 solid 1px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.brown-title{
+    color: #997642;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive design for smaller screens */
 @media (max-width: 1200px) {
