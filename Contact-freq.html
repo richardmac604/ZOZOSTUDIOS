@@ -20,13 +20,27 @@
         <img src="images/menu.png" alt="menu" class="menu-icon">
     </div>
 
+    <div class="menu-overlay" id="siteMenu" aria-hidden="true">
+        <button class="menu-close" id="menuClose" aria-label="Close menu">×</button>
+        <nav class="menu-list">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="policy.html">Policy</a>
+            <a href="bookingInfo.html">How to Book</a>
+            <a href="price.html">Price List</a>
+            <a href="Collection.html">Monthly Collection</a>
+            <a href="bookingInfo.html">Booking Site</a>
+            <a href="Contact-freq.html">Contact / FAQ</a>
+        </nav>
+    </div>
+
 
 
     <main class="body-container-policy">
 
 
         <div>
-            <p>have questions? contact me through: <br><br> Instagram:<a href="instagram://user?username=USERNAME">@zozostudios__</a><br> Email: <a href="mailto:zozostudio.ca@gmail.com">zozostudio.ca@gmail.com</a></p>
+            <p>have questions? contact me through: <br><br> Instagram:<a href="instagram://user?username=zozostudios__">@zozostudios__</a><br> Email: <a href="mailto:zozostudio.ca@gmail.com">zozostudio.ca@gmail.com</a></p>
         </div>
 
         <div class = "content-policy">
@@ -62,7 +76,29 @@
         <p>©2026 ZOZOSTUDIOS.</p>
     </footer>
 
+    <script>
+        const menuToggle = document.querySelector('.menu-icon');
+        const menuClose = document.querySelector('.menu-close');
+        const siteMenu = document.querySelector('.menu-overlay');
 
+        if (menuToggle && menuClose && siteMenu) {
+            menuToggle.addEventListener('click', () => {
+                siteMenu.classList.add('open');
+                siteMenu.setAttribute('aria-hidden', 'false');
+            });
 
+            menuClose.addEventListener('click', () => {
+                siteMenu.classList.remove('open');
+                siteMenu.setAttribute('aria-hidden', 'true');
+            });
+
+            siteMenu.addEventListener('click', event => {
+                if (event.target === siteMenu) {
+                    siteMenu.classList.remove('open');
+                    siteMenu.setAttribute('aria-hidden', 'true');
+                }
+            });
+        }
+    </script>
 </body>
 </html>

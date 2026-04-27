@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ZOZO Studios</title>
+</head>
+
+
+<body>
+
+    <div class="header-container-contact" >
+        <header>
+            <p><b>Monthly Design Collection</b></p>
+        </header>
+        <img src="images/menu.png" alt="menu" class="menu-icon" id="menuToggle">
+    </div>
+
+    <div class="menu-overlay" id="siteMenu" aria-hidden="true">
+        <button class="menu-close" id="menuClose" aria-label="Close menu">×</button>
+        <nav class="menu-list">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="policy.html">Policy</a>
+            <a href="bookingInfo.html">How to Book</a>
+            <a href="price.html">Price List</a>
+            <a href="Collection.html">Monthly Collection</a>
+            <a href="bookingInfo.html">Booking Site</a>
+            <a href="Contact-freq.html">Contact / FAQ</a>
+        </nav>
+    </div>
+
+    <main class="body-container-collection">
+        <div>Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
+        <div class = collection-headers>
+            <span class="brown-title">New:</span>
+        </div>
+        <div class = collection-carousel>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection1">
+                <p>Collection 1</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection2">
+                <p>Collection 2</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection3">
+                <p>Collection 3</p>
+            </div>
+        </div>
+
+
+        <div class = collection-headers>
+            <span class="brown-title">Tier 1: Intermediate</span>
+            <span class="price"> $85+</span>
+        </div>
+        <div class = collection-carousel>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection1">
+                <p>Collection 1</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection2">
+                <p>Collection 2</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection3">
+                <p>Collection 3</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection1">
+                <p>Collection 1</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection1">
+                <p>Collection 1</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection1">
+                <p>Collection 1</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection1">
+                <p>Collection 1</p>
+            </div>
+        </div>
+
+
+        <div class = collection-headers>
+            <span class="brown-title">Tier 2: Complex</span>
+            <span class="price"> $85+</span>
+        </div>
+        <div class = collection-carousel>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection1">
+                <p>Collection 1</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection2">
+                <p>Collection 2</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection3">
+                <p>Collection 3</p>
+            </div>
+        </div>
+
+
+        <div class = collection-headers>
+            <span class="brown-title">Tier 3: Detailed</span>
+            <span class="price"> $85+</span>
+        </div>
+        <div class = collection-carousel>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection1">
+                <p>Collection 1</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection2">
+                <p>Collection 2</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection3">
+                <p>Collection 3</p>
+            </div>
+        </div>
+
+
+        <div class = collection-headers>
+            <span class="brown-title">Tier 4: Intricate</span>
+            <span class="price"> $85+</span>
+        </div>
+        <div class = collection-carousel>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection1">
+                <p>Collection 1</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection2">
+                <p>Collection 2</p>
+            </div>
+            <div class = collection-item>
+                <img src="images/PricingImage.jpg" alt="collection3">
+                <p>Collection 3</p>
+            </div>
+        </div>
+
+    </main>
+
+    
+
+    <footer>
+        <p>footer,sns,q&a</p>
+        <p>©2026 ZOZOSTUDIOS.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.collection-carousel').forEach(carousel => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'collection-carousel-container';
+
+            const leftBtn = document.createElement('button');
+            leftBtn.type = 'button';
+            leftBtn.className = 'carousel-control left';
+            leftBtn.textContent = '‹';
+
+            const rightBtn = document.createElement('button');
+            rightBtn.type = 'button';
+            rightBtn.className = 'carousel-control right';
+            rightBtn.textContent = '›';
+
+            carousel.parentNode.insertBefore(wrapper, carousel);
+            wrapper.appendChild(leftBtn);
+            wrapper.appendChild(carousel);
+            wrapper.appendChild(rightBtn);
+
+            const scrollAmount = carousel.clientWidth * 0.8;
+            leftBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+            rightBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const siteMenu = document.getElementById('siteMenu');
+
+        const openMenu = () => {
+            siteMenu.classList.add('open');
+            siteMenu.setAttribute('aria-hidden', 'false');
+        };
+
+        const closeMenu = () => {
+            siteMenu.classList.remove('open');
+            siteMenu.setAttribute('aria-hidden', 'true');
+        };
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+
+        siteMenu.addEventListener('click', event => {
+            if (event.target === siteMenu) {
+                closeMenu();
+            }
+        });
+    </script>
+</body>
+</html>
