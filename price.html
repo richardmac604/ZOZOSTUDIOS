@@ -43,15 +43,85 @@
             <div class ="content-left-price">
                 <p><b>All listed prices are estimates. 5% GST excluded.</b></p>
                 <button><span class="text">Monthly Design</span><span class="price">$75+</span></button>
+                <div class="expand-content">
+                    <div class="tier-row"><span>Tier:1 Intermediate</span><span>from $85 &nbsp</span></div>
+                    <div class="tier-row"><span>Tier:2 Complex</span><span>from $135</span></div>
+                    <div class="tier-row"><span>Tier:3 Detailed</span><span>from $165</span></div>
+                    <div class="tier-row"><span>Tier:4 Intricate</span><span>from $195</span></div>
+                    <div class="brown-title">Priced by set. Basic manicure + BIAB included. Removal and extension not included.</div>
+                </div>
+
                 <button><span class="text">Freestyle</span> <span class="price">$95+</span></button>
+                <div class="expand-content">
+                    <div class="tier-row"><span>Complex</span><span>from $160</span></div>
+                    <div class="tier-row"><span>Extra</span><span>from $220</span></div>
+                    <div class="brown-title">Priced by set. Basic manicure + BIAB included. Removal and extension not included.</div>
+                </div>
+
                 <button><span class="text">Design Recreation</span> <span class="price">Price Varies</span></button>
+                <div class="expand-content">                    
+                    <div class="tier-row"><span>Basic Manicure(BIAB + 1 Color)</span><span>from $65</span></div>
+                    <u>Add Ons</u>
+                    <div class="tier-row"><span>Additional Color (per color)</span><span>from $2 &nbsp</span></div>
+                    <div class="tier-row"><span>Simple 2D Art (per)</span><span>from $3 &nbsp</span></div>
+                    <div class="tier-row"><span>Complex 2D Art (per)</span><span>from $10</span></div>
+                    <div class="tier-row"><span>Simple 3D Art (per)</span><span>from $3 &nbsp</span></div>
+                    <div class="tier-row"><span>Complex 3D Art (per)</span><span>from $15</span></div>
+                    <div class="brown-title">Priced by set. Basic manicure + add on. Removal and extension not included.</div></div>
             </div>
 
             <div class ="content-right-price">
                 <button><span class="text">Removal</span> <span class="price">Add-on</span></button>
+                <div class="expand-content">
+                    <u>Overlay:</u>
+                    <div class="tier-row"><span>My removal with new set</span><span>from $15</span></div>
+                    <div class="tier-row"><span>Foreign removal with new set</span><span>from $20</span></div>
+                    <div class="tier-row"><span>My removal without new set</span><span>from $40</span></div>
+                    <u>Extension:</u>
+                    <div class="tier-row"><span>My removal with new set</span><span>from $40</span></div>
+                    <div class="tier-row"><span>Foreign removal with new set</span><span>from $50</span></div>
+                    <div class="tier-row"><span>My removal without new set</span><span>from $70</span></div>
+                    <div class="brown-title">Add-on service. Prices vary based on charms, stones, 3D elements, gel thickness, etc</div>
+                </div>
+
                 <button><span class="text">Gel X Extension</span> <span class="price">Add-on</span></button>
+                <div class="expand-content">
+                    <div class="tier-row"><span>Full set</span><span>from $50</span></div>
+                    <div class="tier-row"><span>Fix a broken nail (per nail)</span><span>from $10</span></div>
+                    <div class="brown-title">This is an add-on service.</div>
+                    <div class="brown-title">This pricing does not include designs/colors</div>
+                </div>
+
                 <button><span class="text">Enhancement</span> <span class="price">Add-on</span></button>
-                <button><span class="text">Note</span></button>           
+                <div class="expand-content">
+                    <div class="tier-row"><span>Full set</span><span>from $40</span></div>
+                    <div class="tier-row"><span>Refill (within 3-4 weeks)</span><span>from $20</span></div>
+                    <div class="tier-row"><span>Foreign refill</span><span>from $35</span></div>
+                </div>
+                <button><span class="text">Note</span></button>
+                <div class="expand-content">
+                    <p>prices are estimates, vary based on designs. Any quote given might be based on XXShort nails for overlays, or XShort for extensions, unless specificed</p>
+                    <p>Additional charges may apply, including but not limited to:</p>
+                    <ul>
+                        <li>Longer nail lengths (+ from $5)</li>
+                        <li>Nail shapes (round shape is free)</li>
+                        <li>Extra colors, designs, charms, extensions reshaping, etc.</li>
+                        <li>Extra coverage(for charms,stones,etc.)</li>
+                        <li>Removal of thick nail sets, 3D, charms, stones, etc.</li>
+                        <li>extra structuring</li>
+                        <li>Broken nail fixes</li>
+                        <li>Late fees ($10+) or other policy violation fees</li>
+                    </ul>
+
+                    <p>Nail Length Reference:</p>
+                    <ul>
+                        <li>XXShort (XXS): <13mm</li>
+                        <li>XShort (XS): around 16mm</li>
+                        <li>Short (S): around 19mm</li>
+                        <li>Medium (M): around 22mm</li>
+                        <li>Long (L): >22mm</li>
+                    </ul>
+                </div>           
             </div>
         </div>
 
@@ -90,6 +160,14 @@
                 }
             });
         }
+
+        // Expandable buttons
+        const priceButtons = document.querySelectorAll('.body-container-price button');
+        priceButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('expanded');
+            });
+        });
     </script>
 </body>
 </html>

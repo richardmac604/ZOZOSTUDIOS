@@ -48,21 +48,25 @@
             <div class="monthly-design">
                 <p class ="brown-title">Monthly Design</p>
                 <p>Choose from any of my original designs that I update monthly. Most designs can be chosen in person on your appointment.</p>
-                <p>Read before booking</p>
+                <button><span class="text">Read before booking</span></button>
+                <div class="expand-content">Ensure your nails are clean and free of polish. Bring any specific design preferences or reference photos if available. Monthly designs are updated regularly, so check the collection page for current options.</div>
             </div>
             <div class="design-recreation">
                 <p class ="brown-title">Design Recreation</p>
                 <p>For clients who want me to replicate a nail photo that is <br> not part of my Monthly Design collection.</p>
-                <p>Read before booking</p>
+                <button><span class="text">Read before booking</span></button>
+                <div class="expand-content">Provide clear, high-quality photos of the design you want recreated. Note that complex designs may incur additional charges based on time and materials. I can recreate from social media or personal photos.</div>
             </div>
             <div class="freestyle-design">
                 <p class ="brown-title">Freestyle Design</p>
                 <p>Custom design in my style based on non-nail photos.</p>
-                <p>Read before booking</p>
+                <button><span class="text">Read before booking</span></button>
+                <div class="expand-content">Describe your inspiration, theme, or mood for the design. I will create a custom nail art based on your input. This allows for unique, personalized designs not available in standard collections.</div>
             </div>
             <div class="removal">
                 <p class ="brown-title">Removal</p>
-                <p>Read before booking</p>
+                <button><span class="text">Read before booking</span></button>
+                <div class="expand-content">This service safely removes existing gel polish or extensions. Please inform me if you have sensitive skin or allergies. The process takes about 15-20 minutes and includes basic nail care afterward.</div>
             </div>
             <div class="check-faq">
                 <p>Still unsure which service to pick? Check out the FAQ section for more info</p>
@@ -73,12 +77,18 @@
 
         <div class="policies">
             <b>II. Policy</b>
-            <button>Payment</button>
-            <button>Studio Guidelines</button>
-            <button>Late Fee</button>
-            <button>Cancellation & Rescheduling</button>
-            <button>Design Changes</button>
-            <button>How to book</button>
+            <button><span class="text">Payment</span></button>
+            <div class="expand-content">Payment is due at the time of service. We accept cash, credit/debit cards, and digital payments like Apple Pay. Deposits may be required for complex designs.</div>
+            <button><span class="text">Studio Guidelines</span></button>
+            <div class="expand-content">Please arrive 5-10 minutes early. No outside food or drinks allowed. Children under 12 must be supervised. Maintain a respectful environment for all clients.</div>
+            <button><span class="text">Late Fee</span></button>
+            <div class="expand-content">Late arrivals may result in shortened service time or rescheduling. A $10 late fee applies for arrivals more than 15 minutes past appointment time.</div>
+            <button><span class="text">Cancellation & Rescheduling</span></button>
+            <div class="expand-content">Cancellations require 24 hours notice. Same-day cancellations or no-shows may forfeit deposit. Rescheduling is allowed once per appointment with proper notice.</div>
+            <button><span class="text">Design Changes</span></button>
+            <div class="expand-content">Design changes can be made up to 24 hours before appointment. Changes within 24 hours may incur additional fees depending on complexity.</div>
+            <button><span class="text">How to book</span></button>
+            <div class="expand-content">Book through our website or call directly. First-time clients should book consultation appointments. Deposits required for new clients.</div>
         </div>
     
         
@@ -116,6 +126,14 @@
                 }
             });
         }
+
+        // Expandable buttons
+        const serviceButtons = document.querySelectorAll('.body-container-services button');
+        serviceButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('expanded');
+            });
+        });
     </script>
 </body>
 </html>

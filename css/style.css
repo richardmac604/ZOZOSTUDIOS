@@ -304,6 +304,30 @@ main {
     letter-spacing: 0%;
 }
 
+.body-container-services button {
+    background-color: white;
+    color: black;
+    border: white solid 1px;
+    border-bottom: black solid 1px;
+    padding: 14px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.body-container-services .text::after {
+    content: '▼';
+    margin-left: 6px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
 
 .payment-requirements{
     display: flex;
@@ -549,6 +573,173 @@ main {
     opacity: 0.6;
 }
 
+.expand-content {
+    display: none;
+    padding: 10px 24px;
+    background-color: #f9f9f9;
+    border-left: 2px solid #373737;
+    margin-top: -5px;
+    font-size: 16px;
+    line-height: 1.4;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+button.expanded + .expand-content {
+    display: block;
+    opacity: 1;
+    max-height: 800px;
+    margin-bottom: 10px;
+}
+.tier-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tier-row span:last-child {
+    text-align: right;
+}
+.expanded .text::after {
+    content: '▲';
+}
+
+/* Responsive styles for price page */
+@media (max-width: 1024px) {
+    .body-container-price {
+        padding: 4em 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .content-price {
+        gap: 30px;
+    }
+    .content-left-price button,
+    .content-right-price button {
+        padding: 16px 20px;
+        font-size: 18px;
+    }
+    .expand-content {
+        padding: 8px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .body-container-price {
+        padding: 3em 5%;
+        margin-left: 2%;
+        margin-right: 2%;
+        gap: 60px;
+    }
+    .content-price {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .content-left-price,
+    .content-right-price {
+        gap: 15px;
+    }
+    .content-left-price button,
+    .content-right-price button {
+        padding: 14px 18px;
+        font-size: 16px;
+        min-height: 2.5em;
+    }
+    .expand-content {
+        padding: 6px 16px;
+        font-size: 14px;
+        max-height: 1000px; /* Allow more height on mobile */
+    }
+    .tier-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .tier-row span:last-child {
+        text-align: left;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .body-container-price {
+        padding: 2em 3%;
+        margin: 1em 1%;
+        gap: 40px;
+    }
+    .content-price {
+        gap: 30px;
+    }
+    .content-left-price button,
+    .content-right-price button {
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+    .expand-content {
+        padding: 4px 12px;
+        font-size: 13px;
+    }
+    .header-container-contact p {
+        font-size: 36px;
+    }
+}
+
+/* Responsive styles for services page */
+@media (max-width: 1024px) {
+    .body-container-services {
+        padding: 4em 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        flex-direction: column;
+    }
+    .body-container-services button {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+    .expand-content {
+        padding: 8px 18px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .body-container-services {
+        padding: 3em 5%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .body-container-services button {
+        padding: 10px 16px;
+        font-size: 15px;
+        min-height: 2.5em;
+    }
+    .expand-content {
+        padding: 6px 14px;
+        font-size: 14px;
+        max-height: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .body-container-services {
+        padding: 2em 3%;
+        margin: 1em 1%;
+    }
+    .body-container-services button {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+    .expand-content {
+        padding: 4px 10px;
+        font-size: 13px;
+    }
+    .header-container p {
+        font-size: 36px;
+    }
+}
 
 /* COLLECTION PAGE */
 
