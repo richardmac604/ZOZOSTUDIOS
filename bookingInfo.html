@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="header-container" >
+    <div class="header-container-booking" >
         <header>
             <p><b>Booking</b></p>
         </header>
@@ -46,30 +46,58 @@
         </div>
 
 
-
         <div class="forms">
             <div class = "square-link">
                 <p class="brown-title">1. Square booking Link:</p>
                 <p>Booking instantly and see real-time availability <br>
-                For overlay designs, overlay removal and XXS/XS/S nail lengths only.</p>
-                <p>other services may require longer time slots than<br> what Square's calendercan display. In this case,<br> please use Booking Form instead.</p>
-                <p class = "extra-info">Read before booking</p>
+                For overlay designs, overlay removal and XXS/XS/S nail lengths only.
+                Other services may require longer time slots than<br> what Square's calendercan display. In this case,<br> please use Booking Form instead.</p>
+                <button><span class="text">Read before booking</span></button>
+                <div class="expand-content">
+                    <p>For clients who need foreign removal: After booking, please message me on Instagram or reply to the appointment confirmation SMS with pictures of your nails (both front + side view)</p>
+                </div>
+                <button class="booking-button"> book your appointment</button>
             </div>
 
             <div class = "booking-form">
                 <p class="brown-title">2. Booking Form:</p>
                 <p>Send booking form to Instagram direct message or <br>
-                mail to zozostudio.ca@gmail.com </p> 
-                <p>for M/L nail lengths, full set extension, extension removal, and other longer-time services. I'll<br>
+                mail to zozostudio.ca@gmail.com 
+                for M/L nail lengths, full set extension, extension removal, and other longer-time services. I'll
                 schedule you manually - but please note your <br>
                 preferred time may fill while waiting for my reply.</p>
-                <p class = "extra-info">Read before booking</p>
+                <button><span class="text">Read before booking</span></button>
+                <div class="expand-content">
+                    <p>Please fill out all info on this form:</p>
+                    <ol>
+                        <li>Full name</li>
+                        <li>Email & Canadian phone number</li>
+                        <li>Preferred time slot (date + time)</li>
+                        <li>Service Type
+                            <ul>
+                                <li>Monthly Design: which tier?</li>
+                                <li>Design Recreation</li>
+                                <li>Freestyle</li>
+                            </ul>
+                            <p>if no tier is indicated, i'll assume that you're booking for Intermeidate or Complex tier.</p>
+                            <a href="Collection.html"> Check Monthly Design Collection page to see the designs</a>
+                        </li>
+                            
+                        <li>full set Gel X extension needed? Yes/No</li>
+                        <li>removal needed? Yes/No
+                            <p>if yes:</p>
+                            <p>Is it Overlay or Gel X Extension removal?Foreign removal or my removal?For foreign removal, you must send photos of your current nail set (front + side views).</p>
+                        </li>
+                        <li>Anything else I should know about? (Optional)<br>Example: Medium or Long nail length, silent appointment request, etc.</li>
+                    </ol>
+                     
+                </div>
             </div>
         </div>
 
 
         <div class = "custom-request" >
-            <p>Can't find the service you're looking for? Need a custom time slot? check the FAQ Section or send me a meesage on Instagram <br>
+            <p>Can't find the service you're looking for? Need a custom time slot? check the <a href="Contact-freq.html">[FAQ section]</a> Section or send me a meesage on Instagram <br>
             or email me at zozostudio.ca@gmail.com</p>
         </div>
 
@@ -96,8 +124,11 @@
 
 
     <footer class ="footer">
-        <p>footer,sns,q&a</p>
-        <p>©2026 ZOZOSTUDIOS.</p>
+        <p><a href="Contact-freq.html" target="_blank" rel="noopener noreferrer">
+        Contact/FAQ</a></p>
+        <p><a href="https://www.instagram.com/zozostudio__" target="_blank" rel="noopener noreferrer">
+            <img src="images/instagram.png" alt="instagram" class="instagram">zozostudio__</a></p>
+        <p>©2026 ZozoStudio</p>
     </footer>
 
     <script>
@@ -123,6 +154,14 @@
                 }
             });
         }
+
+        // Expandable buttons
+        const bookingButtons = document.querySelectorAll('.body-container-booking button');
+        bookingButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('expanded');
+            });
+        })
     </script>
 </body>
 </html>

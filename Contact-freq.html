@@ -45,21 +45,33 @@
 
         <div class = "content-policy">
             <div class ="content-left-policy">
-                <button>Question</button>
-                <button>Question</button>
-                <button>Question</button>
-                <button>Question</button>
-                <button>Question</button>
-                <button>Question</button>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the first question.</div>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the second question.</div>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the third question.</div>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the fourth question.</div>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the fifth question.</div>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the sixth question.</div>
             </div>
 
             <div class ="content-right-policy">
-                <button>Question</button>
-                <button>Question</button>
-                <button>Question</button>
-                <button>Question</button>
-                <button>Question</button>
-                <button>Question</button>              
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the seventh question.</div>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the eighth question.</div>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the ninth question.</div>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the tenth question.</div>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the eleventh question.</div>
+                <button><span class="text">Question</span></button>
+                <div class="expand-content">Answer to the twelfth question.</div>              
 
             </div>
         </div>
@@ -71,9 +83,12 @@
 
     
 
-    <footer>
-        <p>footer,sns,q&a</p>
-        <p>©2026 ZOZOSTUDIOS.</p>
+    <footer class ="footer">
+        <p><a href="Contact-freq.html" target="_blank" rel="noopener noreferrer">
+        Contact/FAQ</a></p>
+        <p><a href="https://www.instagram.com/zozostudio__" target="_blank" rel="noopener noreferrer">
+            <img src="images/instagram.png" alt="instagram" class="instagram">zozostudio__</a></p>
+        <p>©2026 ZozoStudio</p>
     </footer>
 
     <script>
@@ -99,6 +114,14 @@
                 }
             });
         }
+
+        // Expandable buttons
+        const contactButtons = document.querySelectorAll('.body-container-policy button');
+        contactButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('expanded');
+            });
+        });
     </script>
 </body>
 </html>

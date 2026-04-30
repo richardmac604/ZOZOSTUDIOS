@@ -41,19 +41,56 @@
 
         <div class = "content-policy">
             <div class ="content-left-policy">
-                <button>Payment</button>
-                <button>Studio Guidelines</button>
-                <button>Late Fee</button>
+                <button><span class="text">Payment</span></button>
+                <div class="expand-content">
+                    <p>Payment in cash or e-transfer only. <b>NO CARD</b> accepted.</p>
+                </div>
+                <button><span class="text">Studio Guidelines</span></button>
+                <div class="expand-content">
+                    <p>At the moment, appointments are 1:1 only. One additional guest may be allowed with prior permission — please let me know in advance. No minors under 15 years old are permitted. Guests may be asked to leave if they cause a disturbance.</p>
+                    <p>I usually treat appointments as silent sessions so I can focus on your nails and keep us on schedule. We can chat a bit during prep if you’d like, but once I start applying polish, I’ll need to stay quiet to concentrate. You’re welcome to watch a show or movie on my TV, or if you’d prefer music instead, just let me know. And of course, if you have any questions, feel free to ask!</p>
+                </div>
+                <button><span class="text">Late Fee</span></button>
+                <div class="expand-content">
+                    <p>There is a 10-minute grace period, but let me know asap if you’re going to be late. After 10 minutes sharp, a late fee of 10$ or more will be charged, or I may cancel the appointment (cancellation fee will apply).</p>
+                </div>
             </div>
 
             <div class ="content-right-policy">
-                <button>Cancellation & Rescheduling</button>
-                <button>Design Changes</button>
+                <button><span class="text">Cancellation & Rescheduling</span></button>
+                <div class="expand-content">
+                    <p>1. Appointments booked throuigh booking link:</p>
+                    <u>Cancellation</u>
+                    <p>All cancellations result in a 50$ cancellation fee. Cancellations made with less than 72 hours’ notice will incur a cancellation fee of 50$ + 50% of the full service price</p>
+                    <u>Rescheduling</u>
+                    <p>Rescheduling with less than 48 hours’ notice will incur a 50$ fee. To confirm the new appointment, the fee must be paid. If the fee is not paid, the appointment will be treated as a cancellation, and the applicable cancellation fee will be charged.</p>
+                    <u>Notes</u>
+                    <p>E-transfer is recommended for cancellation and rescheduling fee, to avoid additional processing fees from Square. If the fee is not paid via e-transfer within 24 hours, the fee will be charged to the card on file, plus an additional 20% processing fee to cover transaction costs.</p>
+                    <p>2. Appointments booked booked through DM/email</p>
+                    <u>Cancellation</u>
+                    <p>All cancellations result in forfeiture of your deposit. Cancellations made with less than 72 hours’ notice will incur an additional 50% fee based on the full service price. This fee is separate from your deposit.</p>
+                    <u>Rescheduling</u>
+                    <p>Rescheduling with less than 48 hours’ notice will forfeit 50% of your deposit. To confirm the new appointment date, the remaining 50% of the deposit must be paid. If it is not paid, the appointment will be treated as a cancellation, and the cancellation fee above will apply</p>
+                    <p>Failure to pay the cancellation fee, or follow the policy will result in being denied future bookings.</p>
+                    <p>3. Additional Terms</p>
+                    <ul>
+                        <li>Clients may reschedule an appointment up to 3 times.</li>
+                        <li>Partial payments will not confirm a rescheduled appointment; full fee must be paid.</li>
+                        <li>All times are local to Vancouver.</li>
+                        <li>Cancellation/reschedule fees are based on the full service price before any discounts.</li>
+                    </ul>
+                </div>
+                <button><span class="text">Design Changes</span></button>
+                <div class="expand-content">
+                    <p>When you book a detailed design or a service that requires longer time than my usual time slot, I’ll have to reserve 2 time slots just for you. If you change to a much simpler design less than 1 week before the appointment, an additional charge will apply, as the reserved time likely can’t be rebooked on short notice.</p>
+                </div>
+
+                
             </div>
         </div>
 
         <div>
-            <button class="how-to-book-policy">how to book</button>
+            <a href="bookingInfo.html"><button class="how-to-book-policy"><b>how to book</b></button></a>
         </div>
    
 
@@ -63,10 +100,12 @@
 
 
 
-
-    <footer>
-        <p>footer,sns,q&a</p>
-        <p>©2026 ZOZOSTUDIOS.</p>
+    <footer class ="footer">
+        <p><a href="Contact-freq.html" target="_blank" rel="noopener noreferrer">
+        Contact/FAQ</a></p>
+        <p><a href="https://www.instagram.com/zozostudio__" target="_blank" rel="noopener noreferrer">
+            <img src="images/instagram.png" alt="instagram" class="instagram">zozostudio__</a></p>
+        <p>©2026 ZozoStudio</p>
     </footer>
 
     <script>
@@ -92,6 +131,14 @@
                 }
             });
         }
+
+        // Expandable buttons
+        const policyButtons = document.querySelectorAll('.body-container-policy button');
+        policyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('expanded');
+            });
+        });
     </script>
 </body>
 </html>

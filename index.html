@@ -13,7 +13,8 @@
 
     <div class="header-container" >
         <header>
-            <p><b>Welcome to <br> ZOZO Studios__</b></p>
+            <b><p>welcome to</p></b>
+            <img src="images/zozostudio-text.png" alt="ZOZO Studios" class="main-title">
         </header>
         <img src="images/menu.png" alt="menu" class="menu-icon">
     </div>
@@ -35,45 +36,76 @@
 
 
     <main class="body-container">
-
         <div class="content-left">
-            <p>hi there :)</p><br>
-            <p>Welcome to my jewel garden. If you’re looking for a calm, peaceful, and relaxing environment with unique nail designs, you’re in the right place</p>
-            <p>I'm always down to chat a bit during prep, but because my detailed work requires precision and focus, I usually keep appointments mostly quiet once polish or design work begins. You’re welcome to watch a show, movie on my TV or listen to music while I work.</p>
-            <p>I’m an introvert and tend to open up slowly, but I’m a good listener, and my regulars often say they feel safe and comfortable confiding in me. I love creating a space where people can just breathe, turn their brain off, and leave with something that lifts them up — many clients say their nails brighten their everyday life.</p>
-            <p>I’m understanding, but I keep clear boundaries and strict policies. If you value respectful, mindful interactions and want a peaceful studio with unique, one-of-a-kind designs, you’ll feel right at home here 🩶</p>
+            <p>before you book: <br>
+            Info on section 1,2&3 are required to read. <br>By booking, you confirm you have read and agreed to all terms.</p>
+            <p class = "disclaimer"> Last update on [date].</p>
+
+            <div class="button-container">
+                <a href="services.html">
+                <button>
+                    <span class="button-text"><p>1. Services(Must Read)</p></span>
+                    <img src="images/arrow.png" alt="arrow" class="button-arrow">
+                </button>
+                </a> 
+                <a href="policy.html">
+                    <button >
+                    <span class="button-text"><p>2. Policy(Must Read)</p></span>
+                    <img src="images/arrow.png" alt="arrow" class="button-arrow">
+                </button>
+                </a>
+
+                <a href="bookingInfo.html">
+                    <button>
+                        <span class="button-text"><p>3. How to book (Must read)</p></span>
+                        <img src="images/arrow.png" alt="arrow" class="button-arrow">
+                    </button>
+                </a>
+                <a href="price.html">
+                    <button>
+                        <span class="button-text"><p>4. Price List</p></span>
+                        <img src="images/arrow.png" alt="arrow" class="button-arrow">
+                    </button>
+                </a>
+                <a href="Collection.html">
+                    <button>
+                        <span class="button-text"><p>5. Monthly Design Collection</p></span>
+                        <img src="images/arrow.png" alt="arrow" class="button-arrow">
+                    </button>
+                </a>
+                <a href="bookingInfo.html">
+                    <button>
+                        <span class="button-text"><p>6. Booking site</p></span>
+                        <img src="images/arrow.png" alt="arrow" class="button-arrow">
+                    </button>
+                </a>
+            </div>
+            
         </div>
+           
 
         <div class="content-right">
-            <b class = "section-title">Before you book:</b>
-            <p class = "info">Info on section 1&2 are required to read.</p>
-            <button class="booking-button">Book your appointment</button>
-            <p class = "disclaimer"> Last update on [date]. By booking, you confirm you<br> read and agreed to all terms.</p>
-            <div class="button-container">
-                <button class="services">
-                    <span class="button-text">1. services & policies</span>
-                    <img src="images/arrow.png" alt="arrow" class="button-arrow">
-                </button><br>
-                <button class="how-to-book">
-                    <span class="button-text">2. How to book</span>
-                    <img src="images/arrow.png" alt="arrow" class="button-arrow">
-                </button><br>
-                <button class="pricing">
-                    <span class="button-text">3. Pricing</span>
-                    <img src="images/arrow.png" alt="arrow" class="button-arrow">
-                </button><br>
-                <button class="monthly-collection">
-                    <span class="button-text">4. Monthly Design Collection</span>
-                    <img src="images/arrow.png" alt="arrow" class="button-arrow">
-                </button><br>
-            </div>
+            <b>Location</b>
+            <p>123 Main Street, City, State 12345</p>
 
+            <p>Hi there :)</p>
+            <p>Welcome to my jewel garden. If you're looking for a calm, peaceful, and relaxing environment with unique nail designs, you're in the right place.</p>
+            <p>People usually call me Zoey, Zo or Z (/zee:/). I'm the owner of ZozoStudio and currently the only designer here.</p>
+            <button><span class="text">Read more</span></button>
+            <div class="expand-content">
+                <p>I’m an introvert and tend to open up slowly, but I’m a good listener, and my regulars often say they feel safe and comfortable confiding in me. I love creating a space where people can just breathe, turn their brain off, and leave with something that lifts them up — many clients say their nails brighten their everyday life</p>
+                <p>I'm always down to chat a bit during prep, but because my detailed work requires precision and focus, I usually keep appointments mostly quiet once polish or design work begins. You’re welcome to watch a show, movie on my TV or listen to music while I work.</p>
+                <p>I’m understanding, but I keep clear boundaries and strict policies. If you value respectful, mindful interactions and want a peaceful studio with unique, one-of-a-kind designs, you’ll feel right at home here 🩶</p>
+            </div>
         </div>
     </main>
 
     <footer class ="footer">
-        <p>footer,sns,q&a</p>
-        <p>©2026 ZOZOSTUDIOS.</p>
+        <p><a href="Contact-freq.html" target="_blank" rel="noopener noreferrer">
+        Contact/FAQ</a></p>
+        <p><a href="https://www.instagram.com/zozostudio__" target="_blank" rel="noopener noreferrer">
+            <img src="images/instagram.png" alt="instagram" class="instagram">zozostudio__</a></p>
+        <p>©2026 ZozoStudio</p>
     </footer>
 
     <script>
@@ -99,6 +131,16 @@
                 }
             });
         }
+
+
+                // Expandable buttons
+        const policyButtons = document.querySelectorAll('.body-container button');
+        policyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('expanded');
+            });
+        });
+
     </script>
 </body>
 </html>

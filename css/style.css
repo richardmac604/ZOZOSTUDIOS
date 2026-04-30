@@ -11,8 +11,17 @@ body {
     flex-direction: column;
 }
 
+a {
+  text-decoration: none !important;
+}
+
+.footer a {
+    color: #373737;
+    text-decoration: none;
+}
+
 .header-container{
-    background-image: url('../images/header_photo.jpg');
+    background-image: url('../images/home-banner.png');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -21,6 +30,34 @@ body {
     width: 100%;
     position: relative;
 }
+
+.header-container header {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+}
+.header-container header img {
+    width: 400px;
+    height: auto;
+    margin-left: 200px;
+}
+
+
+
+.header-container p{
+    font-size: 32px;
+    line-height: 100%;
+    font-weight: 600;
+    letter-spacing: 0%;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
 
 .header-container-policy {
     background-image: url('../images/policy-page.jpg');
@@ -44,6 +81,26 @@ body {
     position: relative;
 }
 
+.header-container-services {
+    background-image: url('../images/Service-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+.header-container-booking {
+    background-image: url('../images/booking-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
 
 
 .menu-icon {
@@ -67,7 +124,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem 1.5rem;
-    background: radial-gradient(circle at top left, rgba(255,255,255,0.95), rgba(255,255,255,0.8) 45%, rgba(255,255,255,0.72));
+    background: radial-gradient(circle at top left, rgba(3, 242, 250, 0.95), rgba(221, 235, 172, 0.8) 45%, rgba(238, 232, 214, 0.72));
     backdrop-filter: blur(12px);
 }
 
@@ -112,7 +169,7 @@ body {
     color: #000;
 }
 
-.header-container-contact p, .header-container-policy p, .header-container p {
+.header-container-contact p, .header-container-policy p, .header-container-services p, .header-container-booking p {
     position: absolute;
     top: 50%;
     left: 100px;
@@ -136,15 +193,18 @@ body {
     flex: 0 0 30%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
+    width: 100%;
 }
-.content-left p {
-    font-size: 18px;
+.content-left p, .content-right p {
+    font-size: 16px;
     line-height: 100%;
-    font-weight: 600;
-    letter-spacing: 0%;
-    width: 60%;
+    font-weight:550;
+    letter-spacing: 2%;
+    width: 100%;
+    color:#373737;
+    padding-right: 20px;
 }
 
 
@@ -154,14 +214,7 @@ body {
     flex: 0 0 30%;
 }
 
-.info {
-    font-size: 16px;
-    line-height: 100%;
-    font-style: medium italic;
-    letter-spacing: 0%;
-    margin-top: 0px;
-    padding-bottom: 16px;;
-}
+
 
 .disclaimer {
     font-size: 16px;
@@ -172,40 +225,25 @@ body {
     padding-top: 24px;
 }
 
-.content-right .booking-button {
+
+.content-left .button-container {
+    width: 100%;
+}
+
+.content-left .button-container button {
+    width: 100%;
     background-color: white;
     color: black;
-    border: black solid 1px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    width: 60%;
-
-}
-
-.content-right .button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 100%;
-    width: 60%;
-}
-
-.services{
-    background-image: url('../images/ServicesImage.jpg');
-    background-size: cover;
-    background-position: center;
     border: none;
+    border-bottom: black solid 1px;
+    padding: 14px 20px 14px 0;
     cursor: pointer;
-    height: 50px;
-    text-indent: 10px;
-    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.336);
+    
 }
+
 
 .button-arrow {
     width: 30px;
@@ -213,70 +251,34 @@ body {
     flex-shrink: 0;
 }
 
-.how-to-book{
-    background-image: url('../images/HowToBookImage.jpg');
-    background-size: cover;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    height: 50px;
-    text-indent: 10px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.336);
-}
-
-.pricing{
-    background-image: url('../images/PricingImage.jpg');
-    background-size: cover;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    height: 50px;
-    text-indent: 10px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.336);
-
-}
-
-.monthly-collection{
-    background-image: url('../images/MonthlyCollectionImage.jpg');
-    background-size: cover;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    height: 50px;
-    text-indent: 10px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.336);
-}
 
 footer {
     border-top: 1px solid black;
     text-align: center;
     opacity: 0.6;
     margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 footer p {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
+}
+
+footer .instagram {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 main {
     flex: 1;
 }
+
+
 
 .body-container-booking{
     padding: 6.25em;
@@ -289,6 +291,7 @@ main {
     font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
+    gap: 1em;
 }
 
 .body-container-services{
@@ -308,7 +311,6 @@ main {
     background-color: white;
     color: black;
     border: white solid 1px;
-    border-bottom: black solid 1px;
     padding: 14px 20px;
     font-size: 18px;
     cursor: pointer;
@@ -326,6 +328,59 @@ main {
     margin-left: 6px;
     font-size: 14px;
     opacity: 0.6;
+}
+
+.body-container-booking button {
+    background-color: white;
+    color: black;
+    border: white solid 1px;
+    padding: 14px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.body-container-booking .text::after {
+    content: '▼';
+    margin-left: 6px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.body-container .text::after {
+    content: '▼';
+    margin-left: 6px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.body-container-booking button.expanded .text::after {
+    content: '▲';
+}
+
+.body-container-services .text {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.body-container-booking .text {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.body-container .text {
+    font-size: 14px;
+    opacity: 0.6;
+}
+.body-container .content-right button{
+    background: white;
+    border:none;
 }
 
 
@@ -456,7 +511,7 @@ main {
     min-height: 4em;
 }
 
-.body-container-policy button {
+.body-container-policy .content-policy button {
     background-color: white;
     color: black;
     border: white solid 1px;
@@ -472,8 +527,60 @@ main {
     text-align: left;
 }
 
+.body-container-policy .text::after {
+    content: '▼';
+    margin-left: 6px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.body-container-policy button.expanded .text::after {
+    content: '▲';
+}
+
 .how-to-book-policy{
     background-image: url('../images/policy-page.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    text-indent: 20px;
+    font-size: 20px;
+    padding: 0 20px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.336);
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left
+}
+
+.booking-button{
+    background-image: url('../images/booking-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    text-indent: 120px;
+    font-size: 20px;
+    padding: 0 20px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.336);
+
+}
+
+.how-to-book-policy::after {
+    content: '';
+    background-image: url('../images/arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.Service-btn-policy{
+    background-image: url('../images/Service-banner.jpg');
     background-size: cover;
     background-position: center;
     border: none;
@@ -487,7 +594,7 @@ main {
     justify-content: space-between;
 }
 
-.how-to-book-policy::after {
+.Service-btn-policy::after {
     content: '';
     background-image: url('../images/arrow.png');
     background-size: contain;
@@ -496,13 +603,7 @@ main {
     height: 30px;
 }
 
-.content-left-policy button::after,
-.content-right-policy button::after {
-    content: '▼';
-    margin-left: 12px;
-    font-size: 14px;
-    opacity: 0.6;
-}
+
 
 /* PRICE PAGE */
 
@@ -590,7 +691,7 @@ main {
 button.expanded + .expand-content {
     display: block;
     opacity: 1;
-    max-height: 800px;
+    max-height: 1200px;
     margin-bottom: 10px;
 }
 .tier-row {
